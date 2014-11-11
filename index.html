@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js"></script>
+		<script src="consumerproducer.js"></script>
+		 <link rel="stylesheet" type="text/css" href="bootstrap.css">
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			div#scroll, #scroll2 {
+			    background-color: #000;
+			    color:#fff;
+			    width: 500px;
+			    height: 300px;
+			    overflow-y: scroll;
+			    font-family: monospace, arial;
+			    margin-bottom: 20px;
+			}
+
+			#infoProducer, #infoConsumer{
+				margin: 20px 20px 20px 20px;
+			}
+
+			div.hidden {
+			    background-color: #00FF00;
+			    width: 100px;
+			    height: 100px;
+			    overflow: hidden;
+			}
+
+			#title{
+				color:#fff;
+				background-color: #000;
+				padding:10px 10px 10px 10px;
+				width: 100%;
+				font-size: 42px;
+			}
+
+			#buffers{
+				margin: 10px 0px 30px 15px;
+			}
+
+			#buff{
+				width:50px;
+			}
+
+			#buffsize{
+				font-size: 24px;
+				display: inline-block;
+				margin: 0px 50px 0px 15px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<center><div id="title">Producer and Consumer Simulation</div></center>
+		<div class="container">	
+			<div class="row">
+				<div class="col-md-6">
+					<div id="producer"><h1>Producer</h1></div>
+					<div id="scroll">
+						<div id="infoProducer"></div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div id="consumer"><h1>Consumer</h1></div>
+					<div id="scroll2">
+						<div id="infoConsumer"></div>
+					</div>
+				</div>
+
+				<h2 id="buffers">Buffer : </h2>
+				<div id="buffsize">Buffer Size : <input type="number" id="buff" min="7" value="7" max="99"></div>
+				<button onclick="consumer()" id="conbutton" class="btn btn-success">Consumer Action</button>&nbsp;&nbsp;&nbsp;&nbsp;
+				<button onclick="producer()" id="probutton" class="btn btn-danger">Producer Action</button>
+			</div>
+			<hr>
+			<footer>10 November 2014 | &copy; Alexander T.K </footer>
+		</div>
+		 
+	</body>
+
+</html>
